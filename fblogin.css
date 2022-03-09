@@ -15,7 +15,7 @@ body{
     margin: 0;
     display: flex;
     flex-direction: row;
-    border: 2px blue solid;
+  
     width: 70vw;   
 }
 .log form{
@@ -158,16 +158,16 @@ body{
         align-items: center;
         padding: 0px;
         margin: 2rem 0;
+        border: 2px solid red;
     }
     .welcome_text{
         min-width:100%;
         min-height: initial;
-        border: red 2px solid;
         border: green1px solid;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: center;
         padding:  0;
-        margin: 0.8rem 0;
+        margin:  1.25rem 0;
     }  
     .welcome_text p{
         text-align: center;
@@ -175,11 +175,11 @@ body{
     .log {
         padding: 0;
         margin: 0;
-        border: 2px green solid;
         min-width: 100%;
     }
     .log form{
-        
+        min-width: 100%;
+        padding: 10px;
     }
     .log button{
         font-size: 0.8rem;
