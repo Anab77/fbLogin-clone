@@ -4,22 +4,29 @@
     padding: 0;
 }
 
-.container{
+body{
+    background-color: #f7f7f7;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    margin: 10% 15%;
+    align-content: center;
+    padding: 10% 15%;
 }
-
+.container{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    border: 2px blue solid;
+    width: 70vw;   
+}
 .log form{
-    width: 25vw;
-    height: auto;
+    min-width: 25vw;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
-    padding: 3px;
+    padding: 0.8rem 0.2rem ;
+    background-color: #ffffff;
     border-radius: 5px;
-    box-shadow:1px -6px 6px rgb(245, 244, 244), 0 1px 6px rgba(0,0,0,.35); /*codepen three sides*/
+    box-shadow:1px 3px 6px #c4c1c1, 0 -3px 6px #c4c1c1; /*codepen three sides*/
 }
 .log  input{
     height: 50px;
@@ -27,12 +34,12 @@
     padding: 6px;
     border: 1px solid rgb(219, 214, 214); 
     border-radius: 5px;
-    
+    background-color: #ffffff;
 }
-
 .log button{
     font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
 }
 .log .login{
     height:50px;
@@ -45,41 +52,59 @@
 }
 .log .createAcc{
     background-color: rgb(12, 180, 12);
-    height: 50px;
+    height: 49px;
     color: white;
     width: 50%;
     border-radius: 7px;
     margin-top: 10px;
     border: none;
     align-self: center;
-    box-shadow: 0 1px 1px rgb(168, 153, 153);
+    box-shadow: 0 1px 1px rgb(168, 153, 153);  
 }
-
-.log  a {
-    margin: 11px;
+.log  a.forgotten-password {
+    margin: 13px;
     text-align: center;
     padding-bottom:10px;
     box-shadow: 0 1px 1px rgb(211, 199, 199);
     color:#3b5892;
     text-decoration: none;
+    background-color:  #ffffff;
+    cursor: pointer;
 }
-
+.log  h4 {
+    background-color: #ffffff;
+}
 .login:hover{
     background-color:#3b5892;
 }
 .createAcc:hover{
     background-color:  rgb(21, 151, 21);
-
 }
 .log h4:hover{
     text-decoration: underline;
 }
 
+.log .form-text{
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+    overflow: hidden;
+    max-block-size: initial;
+}
+.form-text a {
+    text-decoration: none;
+    color: black;
+}
+.form-text p{
+    padding-top: 2px;
+}
 .welcome_text{ 
-    width: 50%;
-    height: fit-content;
-    font-size: 2rem;   
-    margin:3rem 2rem;
+    font-size: 1.3rem;
+    height: 30%;   
+    margin: 2.5rem 2.7rem;
+    padding:1rem 1.5rem;
 }
 .welcome_text h1{
     color:#4267B2;
@@ -87,27 +112,81 @@
 }
 .welcome_text p{
     font-family: Arial, Helvetica, sans-serif;
-}
-@media (max-width:480px){
-    .container{
-        background-attachment: fixed;
+    padding: 6px 0;
+}/*
+@media screen and (min-width:500px) and (max-width:800px){
+   /* .container{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0 auto;
-        text-align: center;
+        align-items: center;
+        padding: 0;
+    }
+    .container form{
+        margin: 0;
+    }
+
+    .form-text{
+        font-size: 0.6rem;
     }
     .welcome_text{
-        width:auto;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding: 0;
+        margin: 0;
     }
-    .welcome_text p ,.welcome_text h1{
-        font-size: 2rem;
+    .welcome_text h1{
+        text-align: center;
+        margin-bottom: 1.2rem;
+    }
+    .welcome_text p{
+        text-align: center;
+        padding: 0;
+    }
+    .log button{
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 
+
+*/
+@media  screen and (max-width:800px) and (min-width:300px){
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 2rem 0;
+    }
+    .welcome_text{
+        min-width:100%;
+        min-height: initial;
+        border: red 2px solid;
+        border: green1px solid;
+        font-size: 0.9rem;
+        text-align: center;
+        padding:  0;
+        margin: 0.8rem 0;
+    }  
+    .welcome_text p{
+        text-align: center;
+    }
+    .log {
+        padding: 0;
+        margin: 0;
+        border: 2px green solid;
+        min-width: 100%;
+    }
+    .log form{
+        
+    }
+    .log button{
+        font-size: 0.8rem;
+        overflow: hidden;
+    }
+    .log .createAcc{
+        padding: 1rem;
+    }
+    
 }
-
-
-
-
-
-
