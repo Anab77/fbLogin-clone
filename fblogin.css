@@ -6,23 +6,26 @@
 
 body{
     background-color: #f7f7f7;
+    padding: 7% 0;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 10% 5%;
+    justify-content:center;
+    align-items: center;
 }
 .container{
-    margin: 0;
+    min-width: 100vw;
     display: flex;
-    flex-direction: row;
-    width: 100vw;   
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 1rem;
 }
-.log form{
-    min-width: 30vw;
-    height: 50vh;
+.log{
+    min-width: 25vw;
+    height: auto;
+}
+.log form{  
     display: flex;
     flex-direction: column;
-    padding: 0.8rem 0.2rem ;
+    padding: 0.8rem 0 ;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow:1px 3px 6px #c4c1c1, 0 -3px 6px #c4c1c1; /*codepen three sides*/
@@ -36,7 +39,6 @@ body{
     background-color: #ffffff;
 }
 .log button{
-    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
 }
@@ -104,50 +106,91 @@ body{
     text-decoration: underline;
 }
 .welcome_text{ 
+    max-width: 40vw;
     font-size: 1.3rem;
-    height: 30%;   
-    width: 700px;
-    margin: 2.5rem 2rem;
-    padding:0.3rem 1rem;
+
 }
 .welcome_text h1{
     color:#4267B2;
     font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 5px;
 }
 .welcome_text p{
     font-family: Arial, Helvetica, sans-serif;
-    padding: 6px 0;
+
 }
 
-@media  screen and (max-width:700px) and (min-width:500px){
+/* this is my easiest media query */
+@media (min-width:401px) and (max-width:700px){
     .container{
+        min-width:100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 1rem;
-        margin: 2rem 0;
+        justify-content: space-evenly;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
     }
     .welcome_text{
-        min-width:100%;
-        min-height: initial;
-        font-size: 0.8rem;
         text-align: center;
-        padding:  0;
+        max-width: 70%;
+        font-size: 1rem;
+    }
+    .welcome_text p{
+    }
+    .log form{
+        min-width: 70vw;
+    }
+    .log .form-text{
+        font-size: 0.7rem;
+    }
+
+}
+
+@media (max-width:400px){
+    .container{
+        visibility: hidden;
+    }
+
+    .log form{
+        margin: 0;
+        visibility: visible;
+        width: 100%;
+    }
+}
+
+
+
+/* 
+@media  (min-width:500px)  and (max-width:700px) {
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px ;
+        margin: 0.5rem;
+        text-align: center;
+    }
+    .welcome_text{
+        min-width: auto;
+        border: 1px black solid;
+        font-size: 0.65rem;
+        padding:  0 10px;
         margin:  1.25rem 0;
     }  
     .welcome_text p{
-        text-align: center;
+        text-align: justify;
     }
     .log {
         padding: 0;
         margin: 0;
-        min-width: 100%;
+        min-width: 50vw;
     }
     .log form{
-        min-width: 100%;
+        width: 80%;
         padding:0.5rem 0;
-        margin:0 0.5rem;
+        margin:0 ;
     }
     .log button{
         min-height: 30px;
@@ -168,7 +211,7 @@ body{
         padding: 1rem 0;
     }
     .log form{
-        max-width:50vw;
+        width:initial;
         height: initial;
     }
     .log button  .createAcc{
@@ -185,4 +228,4 @@ body{
     }
     
 }
-
+ */
